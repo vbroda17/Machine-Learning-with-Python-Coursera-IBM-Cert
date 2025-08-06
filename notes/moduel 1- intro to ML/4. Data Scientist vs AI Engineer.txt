@@ -1,0 +1,59 @@
+Comparing the two and what are the differences
+
+Currently, generative ai has split from AI and has lead to this new feild
+
+Data Scientist
+Data storyteller
+1. 
+* Descriptive through EDA (exploratory data analysis) and clustering
+* Predivtive though ML techniques (regression and classification)
+2. Structured 
+* 100s-100ks objects (require lots of cleaning and preprocessing)
+3. 
+hundreds of different models and algorithms to use
+Need to possibly gather different data to train different models.
+The scope is more narrow so
+    Lower number of parameters
+    Hard to go past the domain of data they have been trained on
+    Need less compute power and time
+4. Pick a usecase, get data, create a model. Use the stuff from talked about before basically
+
+AI engineer
+AI system builder
+1. 
+* Perscriptive - AI optimizations
+- desision optimizations (give a buisness some options to choise) 
+- recommendation engines (suggest target marketing campains)
+* Generative 
+- intelegent assistents (coding or digital advisor)
+- chat bots (summarize and conversational search)
+2. Unstructured (text, image, vidoes etc.)
+Require billions to trillions tokens to be trained on
+3. 
+Toolbox is a lot less cluttered, only really is the foundation model
+This allows one model to generalize for a wide range of tasks with no retraining
+Scope is much more wide
+Due to sifistication is :
+a lot larger in size (billions of parameters)
+way more power and resources to train (100s-1ks GPUs)
+And take weeks to months
+4. 
+Start with a use case
+then skip to a pretrained model
+Best pretrained models are on hugging face and make it easy for developers to get started
+Interact with these models to get the models to do various tasks with natural language
+- This is prompt engineering
+Prompt engineering can be used with frameworks to create larger AI systems. 
+EX: chaining different prompts together, 
+    or parameter-efficient fine-tuning(PEFT) on domain specific
+    or retrieval augmented generation (RAG) to ground answers in truth
+    or creating autonomus agents to reson through complex multi step problems
+Last step is to embed the Ai   in a larger system or workflow
+Such as virtual agents, larger app, or automation
+
+
+Numbers above are
+1. Use cases
+2. Data
+3. Models
+4. Processes

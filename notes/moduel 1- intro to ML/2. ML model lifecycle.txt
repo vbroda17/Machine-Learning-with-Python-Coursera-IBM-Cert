@@ -1,0 +1,15 @@
+From Video
+
+Process Lifecycle
+1. Problem definition
+2. Data Collection
+3. Data Preparation
+4. Model Development and Evaluation
+5. Model Deployment
+
+This Lifecycle is iterative, so go back and forth as needed (as far back as step 5 to 1)
+
+Data collection is the ETL (Extract, Transfrom, Load) Process
+Process involves
+- Collecting data from vaious sources, cleaning, transforming, and storing to a new single place
+Data is then avaliable and the engieer can make the models

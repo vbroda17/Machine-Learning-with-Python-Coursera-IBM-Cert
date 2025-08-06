@@ -1,0 +1,35 @@
+AI makes computers look intelegent by simulating cognative abilites (of humans).
+AI is a general feild including:
+Computer vision
+NLP
+generative AIml
+deep learning
+
+ML using algorithms and feature engineering
+Deep learning uses layered networks and automatically extracts features from data
+ML teached coputers, identify patterns and amke decisions
+algorithms do stuff without a fixed algorithms
+
+Supervised learning models trained on labeled data
+Unsupervised learning models work withou lables
+Semi Supervise learning is iterative
+Reinforcement learning works with feedback from envirionment
+
+ML techniques:
+Classification to predict a category
+regression esitmates and predicts continuous values
+clustering groups together
+association feild to find items or events that offten occur together
+anomoly detection to find unsuual cases
+Sequence mining is used to predict the next event
+Classification reduction is used to reduce data size, particularly the number of features needed
+recomendation systems, associate peoples tastes together
+
+ML on lables data, use classification or regression
+CLass prediction on a groups
+regression does a continuous value
+
+Computer vision with how ML works
+Its great instead of trying to make a lot of very specific rules
+
+

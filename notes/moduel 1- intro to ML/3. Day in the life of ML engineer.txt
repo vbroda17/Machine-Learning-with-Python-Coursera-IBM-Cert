@@ -1,0 +1,35 @@
+Going through more detailed of last notes
+
+1. Problem Definition.
+This part is very important because you need to make sure the ML solution allines with the needs
+
+2. Data Collection.
+identify what data is avaliable on hand (sush as user, production, or other general data)
+Take this data and transform it. In the end you want to make sure that it is all in one sources
+
+3. Data preperation
+This part overlaps with the data collection
+Data offten has errors, missing data, different formats and such. 
+So try to prepare a somewhat final version of the data
+- remove data to remove irrelevant data
+- remove extreme values
+- remove or randomly generate missing values
+- each data colum are the proper formats
+- create new features
+- Do some exploratory data analysis
+- Identify how to split up the data into training and test sets (random or most recent for test)
+
+4. Model Development
+Explore existing frameworks (leverage these as much as possible)
+Example is Content based filtering and collaborative filtering (Example in the video)
+
+5. Model Evaluation
+Tuning the models
+Evaluating the model data that was not in the training
+Later futher evaluate with some real users and obtaining feedback
+ - metrics from this depend on what is going on
+
+6. Model Deployment
+Once satisfied Deployment
+Keep an eye on the model and make sure it is working well
+Update the model with new data in the future

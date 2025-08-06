@@ -1,0 +1,74 @@
+This will explain data, common languages for ML, 
+and tools for data processing, analytics, visualization, ml, dl, cv, nlp, and generative ai
+
+Data is a collection of raw facts, figures, or information used to draw insights, inform decisions, and fuel advanced technologies
+
+ML tools provide funcationality to ML pipelines including
+Data preprocessing and building
+Evaluating
+Optimizing
+Implementing ML models
+
+Examples
+Pandas for data manipulation and analysis
+Scikit-learn for supervised and unsupervised learning algorithms and linear regression
+
+ML languages are those used in building models and decoding hidden patterns in data
+Python is popular for analyzing and processing dta and developing ml models 
+R is used for statistical learning and data exploration and ML
+
+Others are 
+Julia - parallel and distruvuted numerical computing support
+Scala - Processing big data and building ML pipelines
+Java - Supporting scalable ML applications
+JavaScript - Running ML models in web browsers
+
+Machine learning tools can:
+Store and retreieve data
+work with plots, graphs, and dashboards,
+explore, visually inspect, and clean data
+prepare data for ML models
+
+Data processing and analytics examples:
+PostgreSQL - relational database manageement system
+Hadoop - batch processing solution for big data
+Spark - distributed data processing framework
+Apache Kafke - distributed real time streaming analytics
+Pandas - data wrangling and preprocessing
+NumPy - numerical computing tool
+
+data visualization - understand and visualize data structures
+matplotlib - cukstomizable plots and interactive visualization
+seaborn - attractive statistical graphics
+ggplot2 - data visualization pachage in r - building and adding elements in layers
+tableau is a business intelligence tool for interactive visualization dashboards
+
+Machine learning ecosystem - create and tune ML models
+NumPy - numeric computations on data arrays
+Pandas - data analysis, visualization, cleaning, and preperation
+SciPy - Scientific computing and has moduels for optimization, integration, linear regression and more
+SciKit-Learn - for classical machine learning models, offering suite of classification, regression, clustering, and dimensionality reduction algorithms. 
+Note lots of these are built on others shuch as scikit learn being built on NumPy, SciPy, and Matplotlib.
+
+Deep learning tools - designing, training, and testing nn models
+examples: 
+TensorFlow for numerical computing and large scale machine learning
+Keras is easy to use deep learning library for NNs
+Theano is for efficiently defining, optimizing, and evaluating mathmatical expressions involving arrays
+PyTorch for deep learning applications and compution vision and nlp. Also allows for experimentaion to test ideas
+
+Computer Vision tools - tasks like object detection, image classification, facial recognition, and image segmentaiton.
+All deep learning toold can be tailord to computer vision applications
+OpenCV - for real time computer vision applications such as object detection, image classification, and augmented reality
+Scikit-Image - built on SciPy and compatible with Pandas, offers image processing algorithms (filters, segmentation, feature extraction, and morphological operations)
+TorchVision (part of PyTorch), consists of popular datasets, image loading, pre-trained deep learning architectures, and common image transformations for CV. 
+
+NLP tools - help build applications that understand, interpret, and generate human languages
+NLTK (Natural Language Toolkit) - comprehensize library to text processing, tokenization, and stemming tools
+TextBlob - for tasks like part of speech tagging, noun phrase extraction, setiment analysis, and translation
+Stanza (stanford NLP groud) - NLP library with accurate pre trained models for stuff like part of speech tagging, named entity recognition, and dependency parsing
+
+Generative AI tools - leverage AI to generate new content based on input data or prompts (such as text, images, music, code, or other media)
+HuggingFace Transformers library of transformer models for NLP tasks like text generation, language translation, sentiment alalysis
+ChatGPT is for text generation, building chatbots, ecosystemDALL-e is for generating images from text descriptions
+PyTorch uses deep learning to create generative models such as generative adversarial networks (GANS) and transformers for text and iamge generation
