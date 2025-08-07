@@ -1,0 +1,35 @@
+This includes the general tools, frameworks, libraries, platforms, and processes that support edeveloping, deploying and managing ML models.
+
+Numpy is foundational with effiecent numerical computations on large multidimensional data arrays
+Pandas (Built on Numpy and matplotlib) for data analysis, visualization, cleaning, and preparing data for machine learning. Uses arrays called dataframes.
+SciPy (Built on Numpy) for scientific computing and has stuff for optimization, integration, linear regression and more
+Scikit-learn (built on Numpy, SCiPy, and Matplotlib) is used for building classical machine learning models
+
+Scikit-learn
+Free machine learning library
+Wide variety of up to date classification, regression, clustering, and dimensionality reduction algorithms.
+Great documentation and comunity (only exceesed by Pandas)
+Most of the ML pipeline are implemented in Scikit-learn including
+data preprocessing (cleaning, csaling, feature selection and extration), train or test splitting, model setup and fitting, hyperparameter tuning with cross validation, prediction, evaluation, and exporting the model to be used in production
+
+Assuming data is in NumPy arrays, we can easily(where X is a data set and y is target var):
+Standatdize it with 
+    from sklearn import preprocessing
+    X = preprocessing.StandardScaler().git(X).transform(X)
+    
+We can also split into train and test sets with
+    from sklearn.model_selection import train_test_split
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
+Generate a classification model object:
+    from sklearn import svm
+    clf = svm.SVC(gamma=0.001, C=100.)
+Generate model with parameters, then can train on data:
+    clf.git(X_train, y_train)
+    clf.predict(X_test)
+    yhat = clf.predict(X_test) # Result is predicted class for each observation in test
+Different metrics can be used to evaluate the model accuracy (like a confusion matrix)
+    from sklearn.metrics import confusion_matrix
+    print(confusion_matrix(y_test, y_hat, labels=[1,0])) # Compares predicted and actual labels for test set
+Can save model as pickle file and retrive it whenever
+    import pickle
+    s = pickle.dumps(clf)
