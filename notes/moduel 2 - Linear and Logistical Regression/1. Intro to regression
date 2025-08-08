@@ -1,0 +1,19 @@
+Linear regression
+
+Models a relationshiip between a continyous target variable and explanatory features.
+
+There are several types of regression models (goin over simple and mulltiple)
+Deciding on the one to use depends on the data for the dependent variable and the type of model that has the best fit
+
+Simple Regression - a single independent variable estimated a dependent variable.
+Can be linear or nonlinear
+Imposes a linear relationship between the dependent and independent varriable
+Non linear relationship between the dependent and independent variables
+
+Multiple Regression - when more than one independent variable is present
+Same distinctions between linear and nonlinear relationships
+
+Some algorithms
+Linear and polynomial are classical statistical modeling methods
+Random forest and XGBoost are modern machine learning regression models
+Others inclusde k-nearest neighbors, support vector machines, and neural networks
