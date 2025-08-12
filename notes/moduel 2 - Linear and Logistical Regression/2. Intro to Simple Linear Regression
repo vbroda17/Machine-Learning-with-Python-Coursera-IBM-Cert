@@ -1,0 +1,29 @@
+What it is and how it works.
+
+Linear regression models a linear relationship between a continuous target variable and explanitory features.
+
+Predicted target value is y-hat or ŷ
+Predicted variables are x subscript n, so for simple linear just x subscript 1 x₁
+The overall model is the equation of the line, being
+ŷ = θ₀ + θ₁ x₁
+So ŷ is the predicted resplone in terms of x₁ using the y-intercept θ₀ and a slop θ₁
+θ₀ and θ₁ are the coefficients that are selected by the algorithm to determin the best fit line
+
+The average of all redidual errors measures how prrtly the regression line fits the data.
+Can be shown by the equation mean squared error, MSE.
+Linear rregression aims to find the line minizing the mean of all the residual errors.
+This form of regression is known as ordinary least squares regression, or OLS regression.
+
+Use two formulas to calculate the coefficeients θ₀ and θ₁.
+Solution derived (independently) by Gauss and Legendre in the early 1800s.
+Requires to calculate the means of y-bar [ȳ] and x-bar [x̄] of the independent and dependent variables.
+xi and yi in the equation for theta one refer to the ith values of x and y.
+* NOTE that the number (or i) after is an assumed subscript 
+I belive [ȳ] and [x̄] are the averages of all y and x values.
+
+Given the parameters of the linear equation, making a prediction is as simple as solving the equation for a particular input value.
+
+The OLS method is helpful because it is simple and easy to interpret. Its just a calculation.
+Makes OLS fast (expeciall the smaller).
+The model can be way to simplistic to capture complexit (nonlinear relationship in data)
+Outliers can greatly reduce its accuracy (they are given way to much weight in the calculations).
