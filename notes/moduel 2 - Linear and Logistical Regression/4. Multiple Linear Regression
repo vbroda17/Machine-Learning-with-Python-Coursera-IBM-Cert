@@ -1,0 +1,55 @@
+Multiple Linear Regression
+
+Is an extension of simple linear regression.
+Uses two or more independent variables to estimate a dependent variable
+Mathematically, multiple regression is a linear combination of the form y hat equals theta zero plus theta one x one 
+ŷ = θ₀ + θ₁ x₁
+where x₁ is the feature vectors (row)
+      θ is the weights vector (Column)
+      and the matrix vector form is ŷ = X θ
+This can be as big as you like but for example
+One feature: y = θ₀ + θ₁ x₁ which defines a line
+Two Features: ŷ = θ₀ + θ₁ x₁ +  θ₂ x₂ which defines a plane
+θ₀ is the bias term, the others are just the unknown weights.
+
+Multiple linear regression can be used to measure the strength of each independent variable's effect on a dependent variable.
+
+Multiple linear regression results in a better model than simple linear regression, but adding to many varibles can cause the model to overfit, memorizing training data making a poor predictor.
+
+To improve prediction, categorical independent variables can be incorporated into a regression model by converting them to a numerical value.
+Given a binary variable, you can just do 1 or 0.
+Given more than two classes, you can transofrm it into new boolean features for each class.
+
+Correlated varibales are no longer "independent variables" because they are predictors of each other.
+You can preform a what if scenario with a linear regrssion model by changing a single variable while holding all other varibales constant. If the variable is correlated with another feature, then this is not feasable becasue the other variable must also change realisitcally. 
+The solution for avoiding pitfalls from correlated variables is to remove any redundant variables from the regression analyses.
+
+To build the mode, select the variables using a balanced approach:
+    remove redundant variables
+    use uncorrelated variables
+    select variables that are the most understood, controllable, and the most correlate with the target
+
+Multiple linear regression assignes relative importance to each features.
+One feature is a line.
+Two is a plane.
+More than two is a hyper plane
+
+The values in the weight vector theta can be determined by minimizing the mean square prediction error.
+You can measure the residual error for each car in the dataset as the difference between its true CO2 emmission value and the value predicted by the model.
+Residual error = actual value minus predicted value
+The average of all the residual errors is how poorly the model predicts the actual values.
+This is the mean squared error or MSC. This is the most popular metric
+The best model for the data set is the one with the least squared error.
+Note the factor of 1/n is not necessary to include to minimize the error. So this method is called least squares linear regression.
+Minimizing MSE = 1/n time the summation of (actual - predicted) squared
+Is the same as minimizing  SE
+SE = the summation of (actual - predicted) squared
+
+Multiple linear regression aims to minimize the MSC equation by finding the best parameters.
+Many ways to estimate the value of the coefficients, but the most common are ordinary least squares and an optimization approach.
+
+Ordinary least squares estimates the values of the coefficients bt minimizing the mean squared error. This uses the data as a matrix and uses linear algebra operations to calculate the optimal values for theta.
+
+Another option is to use an optimization algorithm to find the best parameters. The process of optimizing the coefficeients by iteratively minimizng the model's error on training data. 
+For example, using gradient descent, which start the optimization with random values for each coeffiecent. GD is good for a large dataset.
+
