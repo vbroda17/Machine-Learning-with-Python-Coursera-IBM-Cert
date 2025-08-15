@@ -1,0 +1,34 @@
+Logistic Regression
+
+Predicts the probablility of an observation belonging to one of two classes (true or false)
+Refers to a binary classifer based on logistic regression
+By choosing a threshold probabiliy, the probability predictor becasomes a binary classifer simply by assigning each observation to one class if its probability is greater than the threshold and to the other class if its probability is less than the threshold.
+
+Is a good choice when:
+1. the target in the data is binary (1 or 0)
+2. When you need the probability of an outcome (probability of buying an object). 
+if the data is linearly seperable, the decision boundry of the logistic regression line, plane, or hyper plane
+3. When you want to understand the impact of an independent feature, allows you to select the best features based on the size of their model coefficients or weights.
+
+Logistic regression is both a probability predictor and a binary classifier.
+
+p̂ or p-hat is the predicted probability that the class y is 1 given data x.
+
+So idea is kind have lienar regression line, that doesnt fully work, then have a threshold go horizontally through that line. Above the threshold is for one class, below is for another.
+y-hat is the predicted balue for above or below threshold.
+
+Instead of having just a big jump from one to the other, a smoother function would be nice.
+So consider the signmoid function (also known as the logit function)
+ defined as 1 over the sum of 1 and e to the minus x
+Can take any continuous value of x and continuously compress it within the range 0,1.
+
+So the model is ginma of y hat
+which representse the probabiulity of p hat 
+and that the output 1 is given x
+Thus you can determin the chance that an observation belongs to wither class.
+
+To assign the class to the observation, define a threshold and assign the observation to 1 if the probability is greater than the threshold, overwise set to 0.
+When the sigmoid funciton is used, the probability is denoted as teh probability that y is 1 given the data:
+P(y=1|X)
+The probability that it will not happen is 
+P(y=0|X) = 1 - P(y=1|X)

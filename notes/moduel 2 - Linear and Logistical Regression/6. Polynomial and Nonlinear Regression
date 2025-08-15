@@ -1,0 +1,27 @@
+Intro to polynomial and nonlinear regression
+
+Nonlinear regression is a statistical method for modeling the relationship between a variable and one or more independent variables where the relationship is represented by a non linear equation.
+
+This could be polynomial, eponential, logarithmic, or any other function that does not use linear parameters.
+
+Nonlinear regression is useful when there is a complex relationship between variables that cannot be captured through a straight line.
+Data relationship is rearly linear. More often the trend is that of a smoothed curve
+
+Polynomial regression an ordinary linear regression to indirectly fit data to polynomial expressions.
+Nonlinear regression follows the same idea, but bases its inputs on functions of given features, such as logarithm or exponential of the features.
+Nonlinear also does not necessarily reduce to linear regression like polynoial regression does. 
+
+Pick regressor that fits trend, not every fine detail.
+
+Polynomial regression expresses a nonlinear depencence on the input features, but it has a linear dependence on the regression coefficeients becasue it can be transformed into a linear regression poroblem.
+Often simply called linear regressions.
+In constast, maby real world complex nonlinear relationsips that can't be modeled as polynomials. For example, exponential or compound growth. (inventsments). Also logmarithmics
+
+Many ways to determin the kind of model to use. 
+Look at it visually to  see if linear or non linear
+Generate the model and analyze the results.
+
+How to find an optimal nonlinear model.
+If there is a mathematical expression for the model, can use optimization technique like gradient descent to find optimal parameters. 
+Otherwise if no specific regression model you can just select any of the meachine learning models: (optimizing non linear models) like regeression trees, random forests, neural networks, support vector machines, gradient boosting machines, k-nearest neighbors.
+Nonlinear regression use polynomial, exponential, logarithmic equeations to model data. 

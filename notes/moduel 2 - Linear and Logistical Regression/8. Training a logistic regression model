@@ -1,0 +1,61 @@
+How to train a logistic regression model and explain the geatures of gradient descent and stocastic gradient descent.
+
+In logistic regression training, you look for the best parameters that map the input features to the target outcomes.
+The objective is to predict the class with minimal error.
+Find parameters/theta that minimizes the cost functin.
+
+The precess includes.
+1. Chose a start set of parameters or theta
+2. Predict the probability that class = 1
+3. Calculate prediction error (cost function)
+4. update theta to reduce prediction error
+5. Repeat until:
+    reach small log loss value 
+    or target number of iterations
+
+Undersstand optimal logistic regression
+Process of creating a decision boundry by combining a linear model y-hat in terms of theta with a sigmoid funciton yeilds binary classifer model that can be called a prelimiary logistic regression model.
+Called preliminary since its not necessarily the best logistic regression model.
+The best is achived only after the first pass.
+Theta needs to be found and optimization steps help find the best parameters (theta).
+To acive optimization, a metric is needed that determins the model's goodness of git for a given set of parameters.
+
+The metric for optimizing logistic regressiion is as cost function called log loss
+Log loss measures how well the predicted probabilities, p-hat of i matches to the actual class's y of i.
+Logistic regression seeks to minimize the cost function. 
+i is the ith observation of the data, which is n rows. 
+Log loss is defined as minus the average over i of two terms. The actual class times the logarithm of the predicted probability that the class is 1 plus 1 minus the actual class times the log of the probability that the class is 0. The negative sign exists because the logarithm is negative for arguments between 0 and 1.
+See screen shot.
+
+Log loss favors confident classifications that are correct.
+So like predicted class for 1 is high and correct, p-hat i is close to 1 and yi is 1.
+
+Can see it vanishes from the formula as the first term vanishes becaause the log term tends to 0 as the probability approaches 1.
+The second term vanishes because the factor 1 minus yi is 0.
+
+Log loss penalizes confident and incorrect predictions.
+For example, probability of a class is high and incorrect
+meanin p-hat is close to 1 but the actual class is 0, the log loss is very large.
+
+There are many ways to stop iterations, but the best is stop when the log loss is satisfactory.
+
+Different ways to chagne the value of theta.
+One of the most popular is Gradient descent.
+Is an iterative approach to finding the minimum of a functino.
+Adjusts the parameter values in the direction of the steepest descent using the derivative of the function (in this case the log loss funciton).
+GD depends on specified learnin rate, which controls how far its allowed to step the parameters in each iteration.
+Main objective of GD is to change the parameter values to find a path to the optimal parameters to minimize the cost function.
+
+Can control the size of each step by scalling the gradient factor called the learning rate.
+
+The gradient of the cost function is calculated over the entire data set on each iteration.
+So when the data set is large, gradient descent becomes very slow. You can try speeding up the convergence by increasing the learning rate, but convergence becaomes less likely as the steps migh be to big to notice the minima.
+
+Instead of using the whole, the cost function gradient can be approximated by choosing a random subset of the data to calculate it on. 
+A variation of the GD algorithm is stochastic gradient descent, or SGD. Its faster but less accurate.
+SGD uses a random subset of training data and scales well.
+
+SGD is more likely to  overlook local minima and find global minima of the cost function. 
+It converges quickly twords a global minimum but can wander around it for some time.
+The convergence can be impoved by slowing down at the algorithm gets closer to a global minimum.
+You can hone in on it by decreasing the learning rate as you get close, or gradually increse the size of the random data sample.
