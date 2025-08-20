@@ -1,0 +1,9 @@
+1. Logistic regression's primary purpose is to classify based on predicted probablility of an observation belonging to two classes
+
+2. The kind of outcomes it predicts is binary classification
+
+3. Threshold probablility is the parameter used to determine the class of an observation.
+
+4. Minimizing the cost function (log loss) is the primary objective in the training Processes
+
+5. The first think to do after evaluating the model and noticing a high log loss is parameter tuning.

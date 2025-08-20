@@ -1,0 +1,9 @@
+1. Simple regression is when you have two variable, and proabably have a linear relationship
+2. Multiple Linear regression is when you have more than 2 variables, probably want to predict something, and the features are very likely to be linearly related to each other.
+For this think home prices basses on size, beds, locations, etc.
+3. Polynomial regression is more for smoother curves. Anything non-linear like exponential, logarithmic, and so on falls into this. 
+4. Logarithmic regression is best for situations with diminishing returns, or when you want to do binary type of analysises or classifications. 
+Think we have these two options, what causes it to be one or the other.
+5. Logistic regresion may need to tune the decision threshold if you see it often misclassifies a certain type of input.
+6. Logistic regression predicts the chance of something is .4, then there's a 40% chance it happens, according to the prediction.
+7. Log loss increases when the model is confidently wrong, which is heavily penalized.
