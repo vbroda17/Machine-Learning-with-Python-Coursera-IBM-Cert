@@ -1,0 +1,26 @@
+This seems very useful for categories: 
+label_encoder = LabelEncoder()
+my_data['Sex'] = label_encoder.fit_transform(my_data['Sex']) 
+my_data['BP'] = label_encoder.fit_transform(my_data['BP'])
+my_data['Cholesterol'] = label_encoder.fit_transform(my_data['Cholesterol']) 
+my_data
+
+This for checking missing values:
+my_data.isnull().sum()
+
+Can also map a target variable to numeric values in a different way: 
+custom_map = {'drugA':0,'drugB':1,'drugC':2,'drugX':3,'drugY':4}
+my_data['Drug_num'] = my_data['Drug'].map(custom_map)
+my_data
+
+For corolation: 
+my_data.drop('Drug', axis=1).corr()['Drug_num']
+
+For practice:
+Age	Sex	BP	Cholesterol	Na_to_K	Drug	Drug_num
+0   1   2   3           4               5
+For parameter 'Sex' : M -> 1, F -> 0 <br>
+For parameter 'BP' : High -> 0, Low -> 1, Normal -> 2<br>
+For parameter 'Cholesterol' : High -> 0, Normal -> 1
+
+'drugA':0,'drugB':1,'drugC':2,'drugX':3,'drugY':4

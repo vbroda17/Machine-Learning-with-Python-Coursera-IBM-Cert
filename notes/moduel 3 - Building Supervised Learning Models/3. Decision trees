@@ -1,0 +1,52 @@
+Define decision trees, describe how to build them, and explain how they learn.
+
+A decision tree is an algorithm that can be visualized as a flowchart for classifying data points.
+Each node is a test, and each branch is the result of a test. each terminal or leaf node assigns its data to a class.
+
+Decision trees can be built by concidering the features of a dataset one by one
+
+Decision tree is trained by growing it like:
+Startiging with a seed node and labeled training data.
+train the node on assigned data by finding the feaature that best splits the datga into pre labeled classes (according to a pre selected spliting critirea)
+Each split partitions the node's input data and each partition is passes along its branch to a new node.
+Repeat the process for each new node using each feature only once.
+
+The tree grows untill all nodes contain a single class each or you run out of features, or a pre-selected stopping criterion is met.
+
+A stopping criterion is know as pre-emptive tree pruning. 
+You can set stopping criteria for when max tree depth, minimun number of data points in a node is exeded, minimum number of samples in a leaf have bee exceeded. Max juimber of leaf noted reached.
+
+You can also stop a tree from growing by curring branches that don't significantly improve system preformance. 
+Several reasons to prune:
+If the tree is to complex you might be over fitting to training data.
+To many classes and features, the tree might be capturing noise and irrelevant details
+Pruning simplifies decision tree model and makes it amenable to generalization.
+Pruned tree is more cocise and easier to understasnd
+Prunning also results in better predictive accuracy
+
+Decision trees are built using recursive partitioning to classify data
+Thus selecting a feature that best splits the data at each node is important. 
+Spliting criterion is used to measure the split quality for determining the best split.
+Two common ones are 
+Entropy reduction
+Gini impurity
+
+Point is to look for the best feature to decrease the impurity of entires in the leaves
+
+Entropy is the measure of information discorder, or randomness in a dataset.
+It measures how reandom the calsses in a node are or how uncertain the feature split result is.
+Want trees that have the smallest Entropy in there nodes. 
+Calculate entropy of a node using the entroy formula
+If classes are homogeneous, entropy = 0
+If classes are equally divided, entorpy = 1
+So want 0, where all a decision leads to like all of a specific class.
+Such as 0 A's and 8 B's. this is 0 entorpy while 4 of each is 1. 
+
+Information gain and entorpy can be thought of as opposites. Where as entorpy decreases, information gain (or the amount of certainty) increases.
+Constructing a decision tree is about fidning the features that return the highest information gain.
+
+Big advantage is they decison trees can be visualized.
+Very interpretable.
+Gain insight on how important some features are.
+
+
