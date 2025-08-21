@@ -1,0 +1,53 @@
+Describe, applications and uses, list classification algorithms, and explain multiclass predictions.
+
+Classification is a supervised ML method to use fully trained models to predict lables on new data. Labels form a categorical var with discrete values. 
+
+Supervised learning understands data  in context when answering a question
+This ensures data accuracy when making predicitons. 
+The model adjusts the data to fit in the algorithm and classify accordingly (defining the input and predicted output)
+
+Applications of classifications
+Many problems can be expressed as sassociations between feature and target variables, particularly when labled data is avaliable.
+Classification can build applications for email filtering, speech to text, handwriting recongnition, diometric identification, document classification, and more.
+
+Churn prediction is when you use ml classification to predict whether a customer will discontinue a service.
+Customer segmentation is when you use classification to predict the category to which a customer belongs.
+Classification can also be used to predict if a customer will likely respond to an advertising campaign.
+
+Classification algorithms
+Common ML classification algorithms include
+Naive Bayes,
+Logistic Regression
+Decision Trees
+K-Nearest Neighbors
+Support Vector machines
+Neural Networks
+
+Algorithms that can learn how to distinguish between multiple classes:
+Logistic Regression
+KNN
+Decision Trees
+
+Many classification algorithms are not able to make distincions between more than two classes, but can be used as components for multi class classifiers.
+
+Strategies for extending binary classifiers to handle multiple classes include one versus all classification and one versus one classification. 
+For these you can kinda imagine and think of a tree.
+
+One versus all (each classifier deciding if a point belongs to a class)
+Implements a set of independent binary classifiers, one for each class label in the dataset.
+Each classifier is assigened a single label that defines its target class.
+Each classifier's task is to make a binary prediction for every data point whether it has the given label (a one versus the rest classifier)
+If there are k classes, then there will be k binary classifiers contributing.
+The algorithm works on each class label one at a time, with a trained outcome showing the points predicted to have a specific classifier.
+The given data point might not belong to any class as it might not get picked up by an individual classifiers.
+Unclassified points fall into another class, which can be usefull for identifying outliers or noise. 
+
+One versus One
+The question becomes "Is it this or that?" (instead of "is it this")
+For each pair of labels, a classifier is trained on the subset of the data corresponding to the two labels and decides which class each point belongs to. The process continues until all classifiers are trained.
+The final class label assigned can be decided by a voting scheme.
+The simplest is by popularity, meaning the class predicted by the most classifiers wins.
+If its a tie, then using an imporved sheme would be better (when ties might happen)
+such as weighing each vote by the confidence level or probability assigned to that class for each classifier.
+So basically probability times win.
+Alternitevly, just use one versus all classification lol
