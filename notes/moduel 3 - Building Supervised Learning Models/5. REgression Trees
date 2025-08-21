@@ -1,2 +1,49 @@
 Decribe regression tree, how its diffeernt between classification, and explain how to create a regresion tree.
 
+Is analogous to a decision tree that predicts continous values (rather than descrite classes)
+The disting;yishing feature between classification and regression in tyhe characteristic of the target or lables data.
+Classification the target variable is a category 
+Regression the target is a continous value.
+
+How regression and classification trees different
+
+            Classification trees                        Regression tree
+Objective   Classify data into descrite Strategies      Predict continous target var
+
+Target Var  Categorical                                 Float
+
+Spliting    Gini impurity or entorpy                    Variance reduction
+Crit    
+
+Prediction  Class label majority vote                   Average value of target values
+at leaf Nodes
+
+Ex Uses     Spam detection, image classification, medical
+                                                        Predict revenue, temps, wildfire risk
+
+Creating regression trees
+Recursively split data set into subsets to maximize information gain.
+This generates a tree structure and minimizes randomness of classes assigned to split nodes.
+So set a threshold value alpha, you split the data based on if a classes values are above or below alpha.
+You make a prediciton at each node based on either a class voting scheme (as with decision trees) or by using the average of the target vbalues in the node.
+The predicted value y-hat for a given node is defined as the average of the actual target values, yi, of the data points in the node.
+so yhat = 1/n of the all of the ys.
+Alternatively you can use other statistics like the median value to assign the prediction.This is better for skewed data.
+For normally distributed data, the median is comparable to the mean, but the median is more expensive to compute. 
+
+Instead of using entropy or information gained criteria, regresion trees select features that minimize the error between teh actual values yi in the resulting nodes and the predicted value yhat. 
+A natural criterion for measuring the pslit quality uses the mean-squared error (MSE). JThis amounts to measuring the variance of the target values within each node (gauges how spread out the values are). The smaller variance is, the more closely the value agrees.
+
+Quality of split
+To measure the quality of split, the weighted average of the MSEs of each split node can be used.
+The weighted average is calculated as average MSE equals one over the number of observations in the two split nodes, times the sum of the number of observations in the left split times the MSE of the left split, and the number of observations in the right split times the MSE of the right split. The lower this value, the lower the variance, and thus, the higher the quality of the split
+During training, the tree finds the feature and threshold that best split each node. For Each potential split of a feature, the tree calculates the MSE for the left and right subsets. The MSE of the split is a weighted average of the MSEs of the subset. The split with the lowest weighted MSE is chosen.
+This minimizes the variance in predictions and ipmorves accruacy.
+
+For binary features, instead of using thesholds, the data is simply sperated into two classes, and the split quality is just the weighted average of the class MSEs. The weighted MSE only  has one results so its allready optimized. 
+For multi class features, you can do stuff like one versus one or one verus all to generate a set of possible binary splits, then for each binary split, calculate the weighted average of the MSEs. Select the split that minimizes the weighted MSE and thus the lowesst prediciton variance. 
+
+How to chose a set of trial thresholds to split a continous feature on. 
+Lots of ways
+One: Start by sorting the feature's values so that Xi is less than or equal to Xj, for all indexes i less than j. Drop any duplicated values so that Xi is strictly less than Xj, for all i less than j. Define your candidate thresholds, αi as the midpoints between each pair of consecutive values, αi is half of Xi, plus Xi plus 1. Choose the threshold that minimizes the weighted MSE for its data split. This is an exhaustive search method that doesn't scale well.
+Two: For very large datasets, selecting a sparse subset of these thresholds can improve efficiency at the cost of accuracy. The method also assumes the target values, X, are uniformly distributed. For efficiency, you should consider the distribution when sampling the thresholds.
