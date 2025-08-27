@@ -1,2 +1,3 @@
-For corollation: correlation_values = raw_data.corr()['tip_amount'].drop('tip_amount')
+For corollation: 
+correlation_values = raw_data.corr()['tip_amount'].drop('tip_amount')
 correlation_values.plot(kind='barh', figsize=(10, 6))

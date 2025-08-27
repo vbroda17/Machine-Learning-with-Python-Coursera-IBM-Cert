@@ -1,0 +1,43 @@
+SVM - Support Vector Machine
+
+Will describe SVM, identify python tools for it, and discuss applications
+
+SVM is a supervised learning technique for building classification and regression models.
+
+Maps each data instance as a point in a multidimensional space, where input features are represented as a value for a specific cordinate.
+
+SVM clasifies input data by identyifying the hyper plane, which distinctly differrentiates two classes.
+These points are fundamental to the dataset. 
+
+For example, in a classification task with two features, the hyper plane is a linear line that segregates and classifies data.
+
+Classification depends on what side of the hyper plane it lands.
+
+Primary goal of SVM is to create a hyperplane that segregates a dataset into two parts and finds the largest margin.
+Larger the margin, the better the accuracy on new data
+
+
+Data generally overlaps in the reworld, so perfectg separation is impossible.
+SVM can use a soft margin to tolerate misclassification while maximixing the margin.
+The balance between maximixing margin and minimizing the number of misclassifications is controlled by a parameter (C). Smaller C allows for more misclassifications or a smaller margin while a larger C forces stricter seperation and a harder margin.
+
+Rudimentary SVMs are a bninary classification algorithm.
+They assume two classes are linearly separable but have been adapted to solve regression problems. 
+Try to divide data into 2 classes by finding a decsision boundry. In a 2d space the decision boundry is a line.
+
+The margin is the distance from the huperplane to the closest pooints from each class. These nearest point represenatices from each class are support vectors.
+
+ Using the training data, and assuming the data has been normalized, the objective is to find a weight vector and a value b, called the bias term, such that A: the inner product of w with itself is minimized, which amounts to minimizing the length of w, and B: For every observation, or data point x, and target value y, the product of y and w transported x plus b is greater than or equal to 1. Therefore, the algorithm's output is the line's values, w and b. 
+
+ Mapping data into a higher-dimensional space like this is called kerneling, where the kernel is a quadratic polynomial in this case. With real-world data, there is no straightforward way to know which kernel function performs best. Scikit-learn provides you with a choice of kernel functions to use with SVM. A linear kernel is the default and corresponds to the usual SVM model. Parabolic embedding is implemented by choosing the polynomial option.
+
+ Radial basis functions, or RBFs, which score high for points close to each other and an exponentially decreasing score as points become more distant. The sigmoid is the same function used for logistic regression.
+
+ Epsilon is a parameter of the SVR learning algorithm that you can select to define a margin around the prediction curve. Points falling outside the margin are interpreted as noise, and points inside as signal.
+
+ SVM has many advantages. For example, it's effective in high-dimensional spaces, it's robust to overfitting, it excels on linear separable data, and it works with weakly separable data using weak margin option.
+
+ SVM also has some limitations. For example, it's slow for training on large data sets it's sensitive to noise and overlapping classes, and it's sensitive to the choice of kernel and regularization parameters, which are non-trivial to determine.
+
+SVM is good for image analysis tasks, such as image classification and handwritten digit recognition. It's also highly effective for parsing, spam detection, and sentiment analysis.
+SVM can be used for machine learning problems, such as speech recognition, anomaly detection, and noise filtering.
