@@ -1,0 +1,22 @@
+Chart for different counts of classes:
+# get the set of distinct classes
+labels = raw_data.Class.unique()
+
+# get the count of each class
+sizes = raw_data.Class.value_counts().values
+
+# plot the class value counts
+fig, ax = plt.subplots()
+ax.pie(sizes, labels=labels, autopct='%1.3f%%')
+ax.set_title('Target Variable Value Counts')
+plt.show()
+
+
+And for how features might effect model:
+correlation_values = raw_data.corr()['Class'].drop('Class')
+correlation_values.plot(kind='barh', figsize=(10, 6))
+
+
+Can take data set imbalance into consideration with this: FOR TREES
+w_train = compute_sample_weight('balanced', y_train)
+
