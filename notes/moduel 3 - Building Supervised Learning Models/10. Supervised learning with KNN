@@ -1,0 +1,45 @@
+K-nearest neighbors is a sukpervised machine learning atlgorithm that takes a group of labeled data and then uses them to learn and label other data points
+
+Used for both classification and regression.
+
+Points close to each other are said to be neighbors based on the paradigm. Close points should have similar features therefor tend to be like each other. 
+
+Need to define mathmatically what is a neighbor
+
+Works by 
+(Classsification)
+picking value, calculate distance from each unlabeled query point to all labeled cases in training data. Search for the k observations that are closes to the query point.
+Predict the value of the given point using the most poopular class value from the k nearest neighbors.
+(Regression)
+Predict using the average or median of the target values
+
+To find an optimal, test a range of values using a labeled test dataset and measure accuracy.
+Then choose k = 1, use the training part for modeling and calculate the prediction accuracy using all samples in the test set. Reapeat the process increasing k and then see which is best for the model.
+
+KNN is a lazy learner, so it doesn't learn how other models do.
+Memorizes training data,
+Makes predictions based on distance to training data points.
+Is still a supervised model.
+
+K to small
+Values flucuate and overfitting
+
+TO large 
+miss finer details and underfitting
+
+Just right is somewhere inbetween
+
+For classification, majority voting becomes unreliable when class distribution is skewed.
+To overcome this, you can weigh the classification by considering the distance from each test point to each of its knns.
+
+When features have large values, they will dominate the distance measure and the predictions.
+Artificially more important features can cause biased or low accuracy predictions.
+Features need to be scalled to midigate this with standardization.
+
+Noisy data required a high value of K to avoid overfitting, which derived up computational cost and lowers accuracy
+
+Keeping only relevant featatures lowers the optimal K and imporves both accuracy and computational efficiency
+Feautres must be relevant to the problem
+Redundant features add computational cost with no expected improvement to accuracy.
+
+Being able to identify relevant feilds comes from domain knowledge. TO check tune k with and without k to evaluate the model preformance.
